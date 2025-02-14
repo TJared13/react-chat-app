@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
         default:"",
 
     }
-});
+}, {timestamps:true}); //timestamps will automatically add createdAt and updatedAt fields ("member since <createdAt>")
 
 const User = mongoose.model("User", userSchema);
 
