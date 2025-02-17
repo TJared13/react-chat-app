@@ -47,7 +47,7 @@ export const sendMessage = async (req, res) => {
 export const getMessages = async (req, res) => {
     try {
         const {id:userToChatId} = req.params;
-        const senderId = req.user._id; //req from protectRoute middleware
+        const senderId = req.user._id; //req from protectRoute middleware aka if logged in
 
         const conversation = await Conversation.findOne({
             participants: {$all: [senderId, userToChatId]},
