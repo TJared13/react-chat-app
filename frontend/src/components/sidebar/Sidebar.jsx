@@ -1,14 +1,14 @@
-import SearchInput from '../sidebar/SearchInput';
-import Conversations from '../sidebar/Conversations';
-import LogOut from '../sidebar/Logout';
+import SearchInput from '../sidebar/SearchInput.jsx';
+import ConversationList from '../sidebar/ConversationList.jsx';
+import Logout from '../sidebar/Logout.jsx';
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className="border-r border-slate-500 p-4 flex flex-col">
         <SearchInput />
-        <div className="divider px-3" />
-        <Conversations />
-        <LogOut />
+        <div className="divider px-3"></div>
+        <ConversationList />
+        <Logout />
     </div>
   )
 }
